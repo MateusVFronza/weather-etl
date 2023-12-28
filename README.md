@@ -17,20 +17,20 @@ The ETL process is divided into the following steps:
 → Load: The cleaned and transformed data is loaded into a target destination, which could be a database, data warehouse, or any other storage system for further analysis.
 
 ### Dependencies
-→ Apache Airflow: The project uses Apache Airflow for task scheduling and orchestration.
-→ Python: The programming language used for scripting and data manipulation.
-→ Visual-Crossing API: The primary data source for weather forecast information.
-→ Docker: The project runs within a Docker container for portability and isolation.
-→ Docker Container Configuration
-→ The project is designed to run within a Docker container. To set up and run the container, follow these steps:
-    • Copy the docker-compose.yaml file from the official Apache Airflow documentation: Apache Airflow Docker Compose.
-    • Create a docker-compose.yaml file in the project's root directory.
-    • Create the following directories in your project's root directory to set up volumes for Airflow:
-        • dags/: This is where you can place your Airflow DAG files.
-        • logs/: Airflow logs will be stored here.
-        • plugins/: You can place custom Airflow plugins in this directory.
-        • data/: This volume will be used for storing data.
-    • Run the following command to initialize the Airflow infrastructure within the Docker container:
+→ Apache Airflow: The project uses Apache Airflow for task scheduling and orchestration. <br>
+→ Python: The programming language used for scripting and data manipulation. <br>
+→ Visual-Crossing API: The primary data source for weather forecast information. <br>
+→ Docker: The project runs within a Docker container for portability and isolation. <br>
+→ Docker Container Configuration <br>
+→ The project is designed to run within a Docker container. To set up and run the container, follow these steps: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    • Copy the docker-compose.yaml file from the official Apache Airflow documentation: Apache Airflow Docker Compose. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    • Create a docker-compose.yaml file in the project's root directory. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    • Create the following directories in your project's root directory to set up volumes for Airflow: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    • dags/: This is where you can place your Airflow DAG files. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    • logs/: Airflow logs will be stored here. <br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    • plugins/: You can place custom Airflow plugins in this directory. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    • data/: This volume will be used for storing data. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    • Run the following command to initialize the Airflow infrastructure within the Docker container: <br>
 
 ```docker-compose up airflow-init```
 
